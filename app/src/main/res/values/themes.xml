@@ -1,0 +1,192 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.CoinkSimpleRegisterSimulator" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/dark_green</item>
+        <item name="colorPrimaryVariant">@color/coink_green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- App Starting Theme -->
+    <style name="Theme.App.Starting" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@drawable/ic_splash_layer_list</item>
+    </style>
+
+    <!-- font styles -->
+    <style name="MontserratBold" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="MontserratMedium" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="MontserratSemibold" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/montserrat_semibold</item>
+    </style>
+
+    <style name="Avenir55Roman" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/avenir_lt_std_55_roman</item>
+    </style>
+
+    <style name="Avenir65Medium" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/avenir_lt_std_65_medium</item>
+    </style>
+
+    <style name="Avenir85Heavy" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/avenir_lt_std_85_heavy</item>
+    </style>
+
+    <style name="Avenir95Black" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/avenir_lt_std_95_black</item>
+    </style>
+
+
+
+    <!-- TextView Styles -->
+    <style name="MontserratBolt_green_16sp" parent="MontserratBold">
+        <item name="android:textColor">@color/coink_green</item>
+        <item name="android:textSize">@dimen/font_16</item>
+    </style>
+
+    <style name="MontserratBolt_dark_green_16sp" parent="MontserratBold">
+        <item name="android:textColor">@color/dark_green</item>
+        <item name="android:textSize">@dimen/font_16</item>
+    </style>
+
+    <style name="MontserratBolt_dark_green_20sp" parent="MontserratBold">
+        <item name="android:textColor">@color/dark_green</item>
+        <item name="android:textSize">@dimen/font_20</item>
+    </style>
+
+    <style name="MontserratBolt_green_18sp" parent="MontserratBold">
+        <item name="android:textColor">@color/coink_green</item>
+        <item name="android:textSize">@dimen/font_18</item>
+    </style>
+
+    <style name="Avenir55Roman_greytext_16sp" parent="Avenir55Roman">
+        <item name="android:textColor">@color/grey_text</item>
+        <item name="android:textSize">@dimen/font_16</item>
+    </style>
+
+    <style name="Avenir55Roman_grey_hint_phone_text_24sp" parent="Avenir55Roman">
+        <item name="android:textColor">@color/light_grey_1</item>
+        <item name="android:textSize">@dimen/font_24</item>
+    </style>
+
+    <style name="Avenir55Roman_darkgreen_16sp" parent="Avenir55Roman">
+        <item name="android:textColor">@color/dark_green</item>
+        <item name="android:textSize">@dimen/font_16</item>
+    </style>
+    <style name="Avenir55Roman_darkgreen_24sp" parent="Avenir55Roman">
+        <item name="android:textColor">@color/dark_green</item>
+        <item name="android:textSize">@dimen/font_24</item>
+    </style>
+
+    <style name="Avenir65Medium_grey_hint_info_text_16sp" parent="Avenir65Medium">
+        <item name="android:textColor">@color/light_grey_1</item>
+        <item name="android:textSize">@dimen/font_16</item>
+    </style>
+
+    <style name="Avenir65Medium_grey_hint_info_text_16sp_bold" parent="Avenir65Medium">
+        <item name="android:textColor">@color/light_grey_1</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Avenir95Black_grey_hint_info_text_16sp_bold" parent="Avenir95Black">
+        <item name="android:textColor">@color/dark_green</item>
+        <item name="android:textSize">@dimen/font_16</item>
+
+    </style>
+
+
+
+
+
+    <!-- Text input layout styles -->
+    <style name="PhoneNumberTIL" parent="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxCornerRadiusBottomEnd">@dimen/all_dimens_5</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/all_dimens_5</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/all_dimens_5</item>
+        <item name="boxCornerRadiusTopStart">@dimen/all_dimens_5</item>
+        <item name="elevation">@dimen/all_dimens_5</item>
+        <item name="hintTextAppearance">@style/Avenir55Roman_grey_hint_phone_text_24sp</item>
+        <item name="android:textSize">@dimen/font_24</item>
+        <item name="backgroundTint">@color/grey_text_container</item>
+    </style>
+
+    <style name="DropDownInputLayout" parent="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+        <item name="hintTextAppearance">@style/Avenir65Medium_grey_hint_info_text_16sp</item>
+        <item name="android:textSize">@dimen/font_24</item>
+    </style>
+
+    <style name="NormalInputLayout" parent="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="hintTextAppearance">@style/Avenir65Medium_grey_hint_info_text_16sp_bold</item>
+        <item name="android:textSize">@dimen/font_24</item>
+        <item name="errorEnabled">true</item>
+    </style>
+
+    <style name="PinInputLayout" parent="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="hintTextAppearance">@style/Avenir65Medium_grey_hint_info_text_16sp_bold</item>
+        <item name="android:textSize">@dimen/font_24</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="passwordToggleEnabled">true</item>
+    </style>
+
+
+
+    <!--Button Styles-->
+    <style name="GreenNormalButton">
+        <item name="android:textColor">@color/dark_green</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="android:textAlignment">center</item>
+        <item name="backgroundTint">@color/button_background_color</item>
+        <item name="cornerRadius">@dimen/all_dimens_40</item>
+        <item name="android:paddingBottom">@dimen/all_dimens_12</item>
+        <item name="android:paddingTop">@dimen/all_dimens_12</item>
+    </style>
+
+    <!--Button Styles-->
+    <style name="LigthGreyNormalButton">
+        <item name="android:textColor">@color/dark_green</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="android:textAlignment">center</item>
+        <item name="backgroundTint">@color/coink_green</item>
+        <item name="cornerRadius">@dimen/all_dimens_40</item>
+        <item name="android:paddingBottom">@dimen/all_dimens_12</item>
+        <item name="android:paddingTop">@dimen/all_dimens_12</item>
+    </style>
+
+    <style name="GreenObscureNormalButton" parent="LigthGreyNormalButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="backgroundTint">@color/dark_green</item>
+        <item name="cornerRadius">@dimen/all_dimens_40</item>
+    </style>
+
+    <style name="DigitInputMethodButton">
+        <item name="android:textColor">@color/dark_green</item>
+        <item name="android:textSize">@dimen/font_32</item>
+        <item name="android:textAlignment">center</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="cornerRadius">@dimen/all_dimens_5</item>
+    </style>
+
+    <style name="CheckButtonStyle" parent="DigitInputMethodButton">
+        <item name="tint">@color/button_background_color</item>
+    </style>
+
+</resources>
+

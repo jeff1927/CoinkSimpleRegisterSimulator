@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.EntryFragment">
+
+    <ImageView
+        android:id="@+id/lg_coink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/all_dimens_40"
+        android:src="@drawable/ic_coink_logo"
+        app:layout_constraintBottom_toTopOf="@+id/tv_coink_slogan"
+        app:layout_constraintEnd_toEndOf="@+id/tv_coink_slogan"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/tv_coink_slogan" />
+
+    <TextView
+        android:id="@+id/tv_coink_slogan"
+        style="@style/MontserratBolt_green_18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/all_dimens_280"
+        android:text="@string/la_alcancia_que_siempre_te_acompana"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_register"
+        app:layout_constraintStart_toStartOf="@+id/btn_register" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_register"
+        style="@style/GreenNormalButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/all_dimens_25"
+        android:layout_marginStart="@dimen/all_dimens_25"
+        android:layout_marginBottom="@dimen/all_dimens_16"
+        android:text="@string/registrate"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"
+        app:layout_constraintStart_toStartOf="@+id/btn_login" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_login"
+        style="@style/GreenObscureNormalButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/all_dimens_25"
+        android:layout_marginStart="@dimen/all_dimens_25"
+        android:layout_marginBottom="@dimen/all_dimens_32"
+        android:text="@string/ingresa"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.UserInfoFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_progress_tab_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/all_dimens_8"
+                android:paddingTop="@dimen/all_dimens_16"
+                android:paddingBottom="@dimen/all_dimens_8"
+                android:src="@drawable/ic_progress_tab_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_oink_policia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/all_dimens_24"
+                android:layout_marginTop="@dimen/all_dimens_42"
+                android:src="@drawable/ic_oink_m"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_progress_tab_2" />
+
+            <TextView
+                android:id="@+id/tv_welcome_msg_1"
+                style="@style/MontserratBolt_dark_green_16sp"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:text="@string/cuales_son_tus_datos"
+                app:layout_constraintStart_toStartOf="@+id/tv_modal_msg_2"
+                app:layout_constraintTop_toTopOf="@+id/iv_oink_policia" />
+
+            <TextView
+                android:id="@+id/tv_modal_msg_2"
+                style="@style/Avenir55Roman"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/all_dimens_24"
+                android:layout_marginEnd="@dimen/all_dimens_24"
+                android:text="@string/modal_msg_2"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_oink_policia"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_oink_policia" />
+
+            <View
+                android:id="@+id/iv_separator"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/all_dimens_1"
+                android:background="@color/coink_green"
+                android:layout_marginStart="@dimen/all_dimens_24"
+                android:layout_marginEnd="@dimen/all_dimens_24"
+                android:layout_marginTop="@dimen/all_dimens_28"
+                app:layout_constraintTop_toBottomOf="@id/tv_modal_msg_2"
+                />
+
+            <TextView
+                android:id="@+id/tv_documento_identidad"
+                style="@style/MontserratBolt_dark_green_16sp"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/all_dimens_48"
+                android:text="@string/documento_de_identidad"
+                app:layout_constraintEnd_toEndOf="@+id/tv_modal_msg_2"
+                app:layout_constraintStart_toStartOf="@+id/iv_oink_policia"
+                app:layout_constraintTop_toBottomOf="@+id/iv_oink_policia" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_document_type"
+                style="@style/DropDownInputLayout"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/all_dimens_16"
+                android:layout_marginStart="@dimen/all_dimens_8"
+                android:hint="@string/tipo_de_documento"
+                app:layout_constraintEnd_toEndOf="@+id/tv_documento_identidad"
+                app:layout_constraintStart_toStartOf="@+id/tv_documento_identidad"
+                app:layout_constraintTop_toBottomOf="@id/tv_documento_identidad">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/et_document_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionDone"
+                    android:backgroundTint="@color/white"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_document_number"
+                style="@style/NormalInputLayout"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/all_dimens_16"
+                android:hint="@string/numero_de_doumento"
+                app:layout_constraintEnd_toEndOf="@+id/til_document_type"
+                app:layout_constraintStart_toStartOf="@+id/til_document_type"
+                app:layout_constraintTop_toBottomOf="@id/til_document_type">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_ducument_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:foregroundTint="@color/dark_green"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_expedition_date"
+                style="@style/NormalInputLayout"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/all_dimens_16"
+                android:hint="@string/fecha_de_expedicion_del_documento"
+                app:layout_constraintEnd_toEndOf="@+id/til_document_number"
+                app:layout_constraintStart_toStartOf="@+id/til_document_number"
+                app:layout_constraintTop_toBottomOf="@id/til_document_number">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_expedition_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:imeOptions="actionDone"
+                    android:inputType="date"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_date_of_birth"
+                style="@style/NormalInputLayout"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/all_dimens_16"
+                android:hint="@string/fecha_de_nacimiento"
+                app:layout_constraintEnd_toEndOf="@+id/til_expedition_date"
+                app:layout_constraintStart_toStartOf="@+id/til_expedition_date"
+                app:layout_constraintTop_toBottomOf="@id/til_expedition_date">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_date_of_birth"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:imeOptions="actionDone"
+                    android:inputType="date"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_gender"
+                style="@style/DropDownInputLayout"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/all_dimens_16"
+                android:hint="@string/genero"
+                app:layout_constraintEnd_toEndOf="@+id/til_date_of_birth"
+                app:layout_constraintStart_toStartOf="@+id/til_date_of_birth"
+                app:layout_constraintTop_toBottomOf="@id/til_date_of_birth">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/et_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:imeOptions="actionDone"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_configure_your_account"
+                style="@style/MontserratBolt_dark_green_16sp"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/all_dimens_32"
+                android:layout_marginBottom="@dimen/all_dimens_16"
+                android:text="@string/configura_tu_cuenta"
+                app:layout_constraintEnd_toEndOf="@+id/til_gender"
+                app:layout_constraintStart_toStartOf="@+id/tv_documento_identidad"
+                app:layout_constraintTop_toBottomOf="@id/til_gender" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_email"
+                style="@style/NormalInputLayout"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/all_dimens_16"
+                android:hint="@string/correo_electronico"
+                app:layout_constraintEnd_toEndOf="@+id/tv_configure_your_account"
+                app:layout_constraintStart_toStartOf="@+id/til_gender"
+                app:layout_constraintTop_toBottomOf="@id/tv_configure_your_account">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionDone"
+                    android:inputType="textEmailAddress"
+                    android:backgroundTint="@color/white"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_confirm_email"
+                style="@style/NormalInputLayout"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/all_dimens_16"
+                android:hint="@string/confirmar_correo_electronico"
+                app:layout_constraintEnd_toEndOf="@+id/til_email"
+                app:layout_constraintStart_toStartOf="@+id/til_email"
+                app:layout_constraintTop_toBottomOf="@id/til_email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_confirm_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionDone"
+                    android:inputType="textEmailAddress"
+                    android:backgroundTint="@color/white"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_security_pin"
+                style="@style/PinInputLayout"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/all_dimens_16"
+                android:hint="@string/pin_de_seguridad"
+                app:layout_constraintEnd_toEndOf="@+id/til_confirm_email"
+                app:layout_constraintStart_toStartOf="@+id/til_confirm_email"
+                app:layout_constraintTop_toBottomOf="@id/til_confirm_email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_security_pin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberPassword"
+                    android:backgroundTint="@color/white"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_confirm_security_pin"
+                style="@style/PinInputLayout"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/all_dimens_16"
+                android:hint="@string/confirma_pin_de_seguiridad"
+                app:layout_constraintEnd_toEndOf="@+id/til_confirm_email"
+                app:layout_constraintStart_toStartOf="@+id/til_confirm_email"
+                app:layout_constraintTop_toBottomOf="@id/til_security_pin">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_confirm_security_pin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberPassword"
+                    android:backgroundTint="@color/white"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_next"
+                style="@style/GreenNormalButton"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/all_dimens_70"
+                android:text="@string/siguiente"
+                app:layout_constraintEnd_toEndOf="@+id/til_confirm_security_pin"
+                app:layout_constraintStart_toStartOf="@+id/til_confirm_security_pin"
+                app:layout_constraintTop_toBottomOf="@id/til_confirm_security_pin" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/til_confirm_email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_progress_tab_2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

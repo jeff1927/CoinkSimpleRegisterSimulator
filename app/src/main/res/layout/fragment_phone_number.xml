@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.PhoneNumberFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_progress_tab_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/all_dimens_8"
+        android:paddingTop="@dimen/all_dimens_16"
+        android:paddingBottom="@dimen/all_dimens_8"
+        android:src="@drawable/ic_progress_tab_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_oink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/all_dimens_24"
+        android:layout_marginTop="@dimen/all_dimens_56"
+        android:src="@drawable/ic_oink"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_progress_tab_1" />
+
+    <TextView
+        android:id="@+id/tv_modal_msg_1"
+        style="@style/Avenir55Roman"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/all_dimens_24"
+        android:layout_marginEnd="@dimen/all_dimens_24"
+        android:text="@string/modal_msg_1"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_oink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_oink"
+        app:layout_constraintTop_toTopOf="@+id/iv_oink" />
+
+    <View
+        android:id="@+id/iv_separator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/all_dimens_1"
+        android:layout_marginStart="@dimen/all_dimens_24"
+        android:layout_marginTop="@dimen/all_dimens_28"
+        android:layout_marginEnd="@dimen/all_dimens_24"
+        android:background="@color/coink_green"
+        app:layout_constraintEnd_toEndOf="@+id/tv_modal_msg_1"
+        app:layout_constraintStart_toStartOf="@+id/iv_oink"
+        app:layout_constraintTop_toBottomOf="@+id/iv_oink" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_phone_number"
+        style="@style/Avenir55Roman_darkgreen_24sp"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@color/grey_text_container"
+        android:elevation="@dimen/all_dimens_14"
+        android:hint="@string/phone_number_hint"
+        android:inputType="phone"
+        android:paddingTop="@dimen/all_dimens_14"
+        android:paddingBottom="@dimen/all_dimens_14"
+        android:textAlignment="center"
+        android:textColorHint="@color/light_grey_1"
+        app:layout_constraintEnd_toEndOf="@+id/tv_modal_msg_1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/iv_oink"
+        app:layout_constraintTop_toBottomOf="@id/iv_separator">
+
+    </com.google.android.material.textview.MaterialTextView>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_backspace"
+        style="@style/DigitInputMethodButton"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/all_dimens_32"
+        android:layout_marginBottom="@dimen/all_dimens_42"
+        android:src="@drawable/ic_backspace_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_check"
+        style="@style/CheckButtonStyle"
+        android:layout_width="@dimen/match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/all_dimens_32"
+        android:src="@drawable/ic_baseline_check_circle_grey_24"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_backspace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_backspace" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_0"
+        style="@style/DigitInputMethodButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/digit_0"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_backspace"
+        app:layout_constraintEnd_toStartOf="@+id/btn_check"
+        app:layout_constraintStart_toEndOf="@+id/btn_backspace"
+        app:layout_constraintTop_toTopOf="@+id/btn_backspace" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_8"
+        style="@style/DigitInputMethodButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/digit_8"
+        app:layout_constraintBottom_toTopOf="@+id/btn_0"
+        app:layout_constraintEnd_toEndOf="@+id/btn_0"
+        app:layout_constraintStart_toStartOf="@+id/btn_0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_9"
+        style="@style/DigitInputMethodButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/digit_9"
+        app:layout_constraintEnd_toEndOf="@+id/btn_check"
+        app:layout_constraintStart_toStartOf="@+id/btn_check"
+        app:layout_constraintTop_toTopOf="@+id/btn_8" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_7"
+        style="@style/DigitInputMethodButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/digit_7"
+        app:layout_constraintEnd_toEndOf="@+id/btn_backspace"
+        app:layout_constraintStart_toStartOf="@+id/btn_backspace"
+        app:layout_constraintTop_toTopOf="@+id/btn_8" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_5"
+        style="@style/DigitInputMethodButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/digit_5"
+        app:layout_constraintBottom_toTopOf="@+id/btn_8"
+        app:layout_constraintEnd_toEndOf="@+id/btn_8"
+        app:layout_constraintStart_toStartOf="@+id/btn_8" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_4"
+        style="@style/DigitInputMethodButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/digit_4"
+        app:layout_constraintEnd_toEndOf="@+id/btn_7"
+        app:layout_constraintStart_toStartOf="@+id/btn_7"
+        app:layout_constraintTop_toTopOf="@+id/btn_5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_6"
+        style="@style/DigitInputMethodButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/digit_6"
+        app:layout_constraintEnd_toEndOf="@+id/btn_9"
+        app:layout_constraintStart_toStartOf="@+id/btn_9"
+        app:layout_constraintTop_toTopOf="@+id/btn_5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_2"
+        style="@style/DigitInputMethodButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/digit_2"
+        app:layout_constraintBottom_toTopOf="@+id/btn_5"
+        app:layout_constraintEnd_toEndOf="@+id/btn_5"
+        app:layout_constraintStart_toStartOf="@+id/btn_5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_3"
+        style="@style/DigitInputMethodButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/digit_3"
+        app:layout_constraintEnd_toEndOf="@+id/btn_6"
+        app:layout_constraintStart_toStartOf="@+id/btn_6"
+        app:layout_constraintTop_toTopOf="@+id/btn_2" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_1"
+        style="@style/DigitInputMethodButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/digit_1"
+        app:layout_constraintEnd_toEndOf="@+id/btn_4"
+        app:layout_constraintStart_toStartOf="@+id/btn_4"
+        app:layout_constraintTop_toTopOf="@+id/btn_2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

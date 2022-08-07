@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coink_nav_graph"
+    app:startDestination="@id/entryFragment">
+
+    <fragment
+        android:id="@+id/entryFragment"
+        android:name="com.myapps.coinksimpleregistersimulator.ui.fragments.EntryFragment"
+        tools:layout="@layout/fragment_entry" >
+        <action
+            android:id="@+id/action_entryFragment_to_phoneNumberFragment"
+            app:destination="@id/phoneNumberFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneNumberFragment"
+        android:name="com.myapps.coinksimpleregistersimulator.ui.fragments.PhoneNumberFragment"
+        tools:layout="@layout/fragment_phone_number" >
+        <action
+            android:id="@+id/action_phoneNumberFragment_to_userInfoFragment"
+            app:destination="@id/userInfoFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/userInfoFragment"
+        android:name="com.myapps.coinksimpleregistersimulator.ui.fragments.UserInfoFragment"
+        tools:layout="@layout/fragment_user_info" >
+        <action
+            android:id="@+id/action_userInfoFragment_to_contractFragment"
+            app:destination="@id/contractFragment"
+            app:popUpTo="@id/phoneNumberFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="phone_number"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/contractFragment"
+        android:name="com.myapps.coinksimpleregistersimulator.ui.fragments.ContractFragment"
+        tools:layout="@layout/fragment_contract" >
+        <action
+            android:id="@+id/action_contractFragment_to_succesfullRegistrationFragment"
+            app:destination="@id/succesfullRegistrationFragment" />
+        <argument
+            android:name="userInfo"
+            app:argType="com.myapps.coinksimpleregistersimulator.domain.models.UserInfoModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/succesfullRegistrationFragment"
+        android:name="com.myapps.coinksimpleregistersimulator.ui.fragments.SuccessfullRegistrationFragment"
+        android:label="fragment_succesfull_registration"
+        tools:layout="@layout/fragment_succesfull_registration" >
+        <argument
+            android:name="userInfo"
+            app:argType="com.myapps.coinksimpleregistersimulator.domain.models.UserInfoModel" />
+        <action
+            android:id="@+id/action_succesfullRegistrationFragment_to_entryFragment"
+            app:destination="@id/entryFragment" />
+    </fragment>
+</navigation>

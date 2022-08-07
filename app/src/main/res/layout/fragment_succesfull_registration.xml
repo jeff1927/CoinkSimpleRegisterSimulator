@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/grey_text_container"
+    tools:context=".ui.fragments.SuccessfullRegistrationFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/all_dimens_10"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_oink_regalo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/all_dimens_48"
+                android:src="@drawable/ic_marrano_regalo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_welcome_msg_1"
+                style="@style/MontserratBolt_dark_green_20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/all_dimens_32"
+                android:layout_marginStart="@dimen/all_dimens_24"
+                android:layout_marginEnd="@dimen/all_dimens_24"
+                android:text="@string/welcome_msg_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_oink_regalo" />
+
+            <TextView
+                android:id="@+id/tv_wellcome_msg2"
+                style="@style/Avenir55Roman_darkgreen_16sp"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/all_dimens_12"
+                android:text="@string/wellcome_msg_2"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@+id/tv_welcome_msg_1"
+                app:layout_constraintStart_toStartOf="@+id/tv_welcome_msg_1"
+                app:layout_constraintTop_toBottomOf="@id/tv_welcome_msg_1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_accept"
+                style="@style/GreenNormalButton"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/all_dimens_32"
+                android:text="@string/btn_text_aceptar"
+                app:layout_constraintEnd_toEndOf="@+id/tv_wellcome_msg2"
+                app:layout_constraintStart_toStartOf="@+id/tv_wellcome_msg2"
+                app:layout_constraintTop_toBottomOf="@id/tv_wellcome_msg2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

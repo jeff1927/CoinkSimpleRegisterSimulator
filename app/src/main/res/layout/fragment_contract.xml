@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.ContractFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_progress_tab_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/all_dimens_8"
+            android:paddingTop="@dimen/all_dimens_16"
+            android:paddingBottom="@dimen/all_dimens_8"
+            android:src="@drawable/ic_progress_tab_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_oink_policia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/all_dimens_24"
+            android:layout_marginTop="@dimen/all_dimens_56"
+            android:src="@drawable/ic_oinkpolicia"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_progress_tab_2" />
+
+        <TextView
+            android:id="@+id/tv_modal_msg_3"
+            style="@style/MontserratBolt_dark_green_16sp"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/all_dimens_24"
+            android:layout_marginTop="@dimen/all_dimens_40"
+            android:text="@string/contract_msg_1"
+            app:layout_constraintBottom_toTopOf="@+id/tv_contract_msg_2"
+            app:layout_constraintStart_toEndOf="@+id/iv_oink_policia"
+            app:layout_constraintTop_toBottomOf="@+id/iv_progress_tab_2" />
+
+        <TextView
+            android:id="@+id/tv_contract_msg_2"
+            style="@style/Avenir55Roman_darkgreen_16sp"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/all_dimens_24"
+            android:layout_marginTop="@dimen/all_dimens_6"
+            android:layout_marginEnd="@dimen/all_dimens_24"
+            android:text="@string/contarct_msg_2"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_oink_policia"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_oink_policia"
+            app:layout_constraintTop_toBottomOf="@id/tv_modal_msg_3" />
+
+        <View
+            android:id="@+id/iv_separator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/all_dimens_1"
+            android:background="@color/coink_green"
+            android:layout_marginStart="@dimen/all_dimens_24"
+            android:layout_marginEnd="@dimen/all_dimens_24"
+            android:layout_marginTop="@dimen/all_dimens_28"
+            app:layout_constraintEnd_toEndOf="@+id/tv_contract_msg_2"
+            app:layout_constraintStart_toStartOf="@+id/iv_oink_policia"
+            app:layout_constraintTop_toBottomOf="@id/tv_contract_msg_2" />
+
+        <TextView
+            android:id="@+id/tv_contract_msg_3"
+            style="@style/MontserratBolt_dark_green_16sp"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/all_dimens_40"
+            android:text="@string/contract_msg_3"
+            app:layout_constraintEnd_toEndOf="@+id/tv_contract_msg_2"
+            app:layout_constraintStart_toStartOf="@+id/iv_oink_policia"
+            app:layout_constraintTop_toBottomOf="@id/iv_separator" />
+
+        <TextView
+            android:id="@+id/tv_contract_msg_4"
+            style="@style/Avenir55Roman_darkgreen_16sp"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/all_dimens_16"
+            android:text="@string/contract_msg_4"
+            app:layout_constraintEnd_toEndOf="@+id/tv_contract_msg_3"
+            app:layout_constraintStart_toStartOf="@+id/tv_contract_msg_3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_contract_msg_3" />
+
+        <TextView
+            android:id="@+id/tv_contract_msg_5"
+            style="@style/Avenir95Black_grey_hint_info_text_16sp_bold"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/all_dimens_16"
+            android:text="@string/contract_msg_5"
+            app:layout_constraintEnd_toEndOf="@+id/tv_contract_msg_4"
+            app:layout_constraintStart_toStartOf="@+id/tv_contract_msg_4"
+            app:layout_constraintTop_toBottomOf="@id/tv_contract_msg_4" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cb_read_contract"
+            android:layout_width="@dimen/all_dimens_24"
+            android:layout_height="@dimen/all_dimens_24"
+            android:layout_marginTop="@dimen/all_dimens_16"
+            android:buttonTint="@color/coink_green"
+            app:layout_constraintStart_toStartOf="@+id/tv_contract_msg_5"
+            app:layout_constraintTop_toBottomOf="@id/tv_contract_msg_5" />
+
+        <TextView
+            android:id="@+id/tv_contract_msg_6"
+            style="@style/Avenir55Roman_darkgreen_16sp"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/all_dimens_12"
+            android:text="@string/contract_msg_6"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_read_contract"
+            app:layout_constraintStart_toEndOf="@+id/cb_read_contract"
+            app:layout_constraintTop_toTopOf="@+id/cb_read_contract" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_accept"
+            style="@style/GreenNormalButton"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/all_dimens_40"
+            android:enabled="false"
+            android:text="@string/btn_text_aceptar"
+            app:layout_constraintEnd_toEndOf="@+id/tv_contract_msg_5"
+            app:layout_constraintStart_toStartOf="@+id/tv_contract_msg_5"
+            app:layout_constraintTop_toBottomOf="@id/tv_contract_msg_6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

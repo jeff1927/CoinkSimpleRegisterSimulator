@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- All dimens -->
+    <dimen name="match_constraint">0dp</dimen>
+    <dimen name="all_dimens_1">1dp</dimen>
+    <dimen name="all_dimens_2">2dp</dimen>
+    <dimen name="all_dimens_4">4dp</dimen>
+    <dimen name="all_dimens_5">5dp</dimen>
+    <dimen name="all_dimens_6">6dp</dimen>
+    <dimen name="all_dimens_8">8dp</dimen>
+    <dimen name="all_dimens_10">10dp</dimen>
+    <dimen name="all_dimens_12">12dp</dimen>
+    <dimen name="all_dimens_14">14dp</dimen>
+    <dimen name="all_dimens_16">16dp</dimen>
+    <dimen name="all_dimens_24">24dp</dimen>
+    <dimen name="all_dimens_28">24dp</dimen>
+    <dimen name="all_dimens_25">25dp</dimen>
+    <dimen name="all_dimens_32">32dp</dimen>
+    <dimen name="all_dimens_40">40dp</dimen>
+    <dimen name="all_dimens_42">42dp</dimen>
+    <dimen name="all_dimens_48">48dp</dimen>
+    <dimen name="all_dimens_56">56dp</dimen>
+    <dimen name="all_dimens_70">70dp</dimen>
+    <dimen name="all_dimens_120">120dp</dimen>
+    <dimen name="all_dimens_280">280dp</dimen>
+
+
+    <!-- Weights -->
+    <item name="weight_0" format="integer" type="integer">0</item>
+    <item name="weight_1" format="integer" type="integer">1</item>
+
+    <!-- All integers -->
+    <item name="all_integer_1" format="integer" type="integer">1</item>
+
+    <!-- Fonts size -->
+    <dimen name="font_48">48sp</dimen>
+    <dimen name="font_44">44sp</dimen>
+    <dimen name="font_32">32sp</dimen>
+    <dimen name="font_24">24sp</dimen>
+    <dimen name="font_22">22sp</dimen>
+    <dimen name="font_20">20sp</dimen>
+    <dimen name="font_18">18sp</dimen>
+    <dimen name="font_17">17sp</dimen>
+    <dimen name="font_16">16sp</dimen>
+    <dimen name="font_14">14sp</dimen>
+    <dimen name="font_12">12sp</dimen>
+    <dimen name="font_10">10sp</dimen>
+
+
+</resources>
