@@ -27,4 +27,11 @@ Visual Components of the app are in this layer: Activities and Fragments, furthe
 - [Live data](https://developer.android.com/topic/libraries/architecture/livedata.html)
 - [Navigation](https://developer.android.com/guide/navigation)
 
+## Instructions to build this project:
+
+In order to limit the access to the coink API, the only thing what you need to build this project successful, is to put the PUBLIC_API_KEY in your local properties file, just like the following video shows
+
+- https://www.youtube.com/watch?v=X8lYNW_Or2o
+
+
 
