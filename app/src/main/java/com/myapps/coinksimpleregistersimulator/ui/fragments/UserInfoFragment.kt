@@ -86,31 +86,32 @@ class UserInfoFragment : Fragment() {
     private fun setupObservers() {
         with(viewModel){
             idTypeError.observe(viewLifecycleOwner){
-                binding.etDocumentType.error = "Error en tipo de documento"
-                showSnackBar("Seleccione una de las opciones")
+                binding.etDocumentType.error = getString(R.string.error_en_el_tipo_de_documento)
+                showSnackBar(getString(R.string.seleccione_una_de_las_opciones))
             }
             idError.observe(viewLifecycleOwner){
-                binding.etDucumentNumber.error = "Documento invalido"
-                showSnackBar("Documento invalido")
+                binding.etDucumentNumber.error = getString(R.string.documento_invalido)
+                showSnackBar(getString(R.string.documento_invalido))
             }
             idExpeditionDateError.observe(viewLifecycleOwner){
-                binding.etExpeditionDate.error = "Error en la fecha"
-                showSnackBar("Error en la fecha de expedicion ")
+                binding.etExpeditionDate.error = getString(R.string.error_en_la_fecha_de_expedicion)
+                showSnackBar(getString(R.string.formato_no_valido))
             }
             dateOfBirthError.observe(viewLifecycleOwner){
-                binding.etDateOfBirth.error = "Error en la fecha"
-                showSnackBar("Error en la fecha de nacimiento ")
+                binding.etDateOfBirth.error = getString(R.string.error_en_la_fecha_de_nacimiento)
+                showSnackBar(getString(R.string.formato_no_valido))
             }
             genderError.observe(viewLifecycleOwner){
-                binding.etGender.error = "Error en tipo de genero"
+                binding.etGender.error = getString(R.string.error_tipo_de_genero)
+                showSnackBar(getString(R.string.elija_un_tipo_de_genero))
             }
             emailError.observe(viewLifecycleOwner){
-                binding.etEmail.error = "Correo invalido"
-                showSnackBar("Correo invalido")
+                binding.etEmail.error = getString(R.string.correo_no_valido)
+                showSnackBar(getString(R.string.correo_no_valido))
             }
             pinError.observe(viewLifecycleOwner){
-                binding.etSecurityPin.error = "Pin no valido"
-                showSnackBar("Pin no valido")
+                binding.etSecurityPin.error = getString(R.string.pin_no_valido)
+                showSnackBar(getString(R.string.pin_no_valido))
             }
             userInfoOk.observe(viewLifecycleOwner){ userInfo ->
                 userInfo.data?.let {
@@ -118,9 +119,9 @@ class UserInfoFragment : Fragment() {
                     navigateWithDirections(UserInfoFragmentDirections.actionUserInfoFragmentToContractFragment(it))
                     }
                     else{
-                        if (!compareEmail()) binding.etConfirmEmail.error = "El correo no coincide"
+                        if (!compareEmail()) binding.etConfirmEmail.error = getString(R.string.correo_no_coincide)
                         else{
-                            if (!comparePin()) binding.etConfirmSecurityPin.error = "El pin no coincide"
+                            if (!comparePin()) binding.etConfirmSecurityPin.error = getString(R.string.pin_no_coincide)
                         }
                     }
                 }

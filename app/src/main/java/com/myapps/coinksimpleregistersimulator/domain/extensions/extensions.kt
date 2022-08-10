@@ -1,6 +1,5 @@
 package com.myapps.coinksimpleregistersimulator.domain.utils
 
-import android.icu.number.FormattedNumber
 import android.os.Bundle
 import android.util.Patterns
 import android.view.View
@@ -10,12 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavDirections
 import androidx.navigation.findNavController
 import com.google.android.material.snackbar.Snackbar
-import java.text.DateFormat
-import java.text.DecimalFormat
-import java.text.Format
-import java.text.ParseException
-import java.text.SimpleDateFormat
-import java.util.Locale
+import com.myapps.coinksimpleregistersimulator.domain.constans.STRING_DATE_REGEX_PATTERN
+import com.myapps.coinksimpleregistersimulator.domain.constans.STRING_EMPTY
+import com.myapps.coinksimpleregistersimulator.domain.constans.STRING_SPACE_REGEX_PATTERN
 
 fun Fragment.navigate(resId: NavDirections, bundle: Bundle?) {
     view?.findNavController()?.navigate(resId)
@@ -30,11 +26,11 @@ fun String.isEmailNoValid() : Boolean {
 }
 
 fun String.isDateFormatValid() : Boolean {
-    return this.matches(Regex("^\\d{2}/\\d{2}/\\d{4}$"))
+    return this.matches(Regex(STRING_DATE_REGEX_PATTERN))
 }
 
 fun String.deleteSpaces() : String {
-    return this.replace("\\s".toRegex(), "")
+    return this.replace(STRING_SPACE_REGEX_PATTERN.toRegex(), STRING_EMPTY)
 }
 
 fun Fragment.showSnackBar(message: String) {

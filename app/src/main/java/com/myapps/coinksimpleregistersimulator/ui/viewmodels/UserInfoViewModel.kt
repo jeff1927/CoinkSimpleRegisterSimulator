@@ -4,6 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.myapps.coinksimpleregistersimulator.domain.constans.STRING_ERROR_DE_CONEXION
+import com.myapps.coinksimpleregistersimulator.domain.constans.STRING_ERROR_DE_SERVIDOR
 import com.myapps.coinksimpleregistersimulator.domain.models.UserInfoModel
 import com.myapps.coinksimpleregistersimulator.domain.usecases.CredentialsValidation
 import com.myapps.coinksimpleregistersimulator.domain.usecases.GetDocumentTypesUseCase
@@ -13,7 +15,6 @@ import com.myapps.coinksimpleregistersimulator.domain.utils.StateResult
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import retrofit2.HttpException
@@ -68,9 +69,9 @@ class UserInfoViewModel @Inject constructor(
                         _documentTypeList.postValue(it)
                     }
                 }catch (e: HttpException) {
-                    _documentTypeList.postValue(StateResult.Failed("Error en el servidor"))
+                    _documentTypeList.postValue(StateResult.Failed(STRING_ERROR_DE_SERVIDOR))
                 }catch (e: Exception) {
-                    _documentTypeList.postValue(StateResult.Failed("Error de conexion"))
+                    _documentTypeList.postValue(StateResult.Failed(STRING_ERROR_DE_CONEXION))
                 }
             }
         }
@@ -84,9 +85,9 @@ class UserInfoViewModel @Inject constructor(
                         _genderList.postValue(it)
                     }
                 }catch (e: HttpException) {
-                    _genderList.postValue(StateResult.Failed("Error en el servidor"))
+                    _genderList.postValue(StateResult.Failed(STRING_ERROR_DE_SERVIDOR))
                 }catch (e: Exception) {
-                    _genderList.postValue(StateResult.Failed("Error de conexion"))
+                    _genderList.postValue(StateResult.Failed(STRING_ERROR_DE_CONEXION))
                 }
             }
         }

@@ -18,8 +18,8 @@
     <string name="documento_de_identidad">Documento de identidad</string>
     <string name="tipo_de_documento">Tipo de Documento</string>
     <string name="numero_de_doumento">Número de Doumento</string>
-    <string name="genero">Genero</string>
-    <string name="fecha_de_expedicion_del_documento">Fecha de expedicion del documento (DD/MM/AAAA)</string>
+    <string name="genero">Género</string>
+    <string name="fecha_de_expedicion_del_documento">Fecha de expedición del documento (DD/MM/AAAA)</string>
     <string name="fecha_de_nacimiento">Fecha de Nacimiento (DD/MM/AAAA)</string>
     <string name="configura_tu_cuenta">Configura Tu Cuenta</string>
     <string name="correo_electronico">Correo Electrónico</string>
@@ -27,6 +27,23 @@
     <string name="pin_de_seguridad">PIN de seguridad</string>
     <string name="siguiente">SIGUIENTE</string>
     <string name="confirma_pin_de_seguiridad">Confirma PIN de Seguiridad</string>
+
+    <!-- Modal messages -->
+    <string name="error_en_el_tipo_de_documento">Error en el tipo de documento</string>
+    <string name="documento_invalido">Documento invalido</string>
+    <string name="seleccione_una_de_las_opciones">Seleccione una de las opciones</string>
+    <string name="error_en_la_fecha_de_expedicion">Error en la fecha de expedición</string>
+    <string name="error_en_la_fecha_de_nacimiento">Error en la fecha de nacimiento</string>
+    <string name="formato_no_valido">Formato no válido</string>
+    <string name="error_tipo_de_genero">Error en el tipo de género</string>
+    <string name="elija_un_tipo_de_genero">Elija un tipo de género</string>
+    <string name="correo_no_valido">Correo no valido</string>
+    <string name="pin_no_valido">Pin no valido</string>
+    <string name="correo_no_coincide">Correo no coincide</string>
+    <string name="pin_no_coincide">Pin no coincide</string>
+
+    <!-- Userinfo ViewModel -->
+    <string name="error_en_el_servodor">Error en el servidor</string>
 
     <!-- contract fragment -->
     <string name="contract_fragment_tb_text">FINALIZAR</string>

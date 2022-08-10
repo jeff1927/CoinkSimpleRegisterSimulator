@@ -34,8 +34,8 @@ class CoinkRepositoryImp @Inject constructor(private val api: CoinkApi): CoinkRe
         try {
             val response = api.getAllGenders()
             if (response.isSuccessful) {
-                val docTypeList = response.body()?.let { List(it.size){ i -> it[i].name } }
-                docTypeList?.let {
+                val genderList = response.body()?.let { List(it.size){ i -> it[i].name } }
+                genderList?.let {
                     emit(StateResult.Success(it))
                 }
             }

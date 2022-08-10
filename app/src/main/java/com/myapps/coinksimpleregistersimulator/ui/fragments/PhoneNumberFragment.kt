@@ -1,14 +1,24 @@
 package com.myapps.coinksimpleregistersimulator.ui.fragments
 
-import android.content.res.ColorStateList
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.myapps.coinksimpleregistersimulator.R
 import com.myapps.coinksimpleregistersimulator.databinding.FragmentPhoneNumberBinding
+import com.myapps.coinksimpleregistersimulator.domain.constans.INT_0
+import com.myapps.coinksimpleregistersimulator.domain.constans.INT_1
+import com.myapps.coinksimpleregistersimulator.domain.constans.INT_2
+import com.myapps.coinksimpleregistersimulator.domain.constans.INT_3
+import com.myapps.coinksimpleregistersimulator.domain.constans.INT_4
+import com.myapps.coinksimpleregistersimulator.domain.constans.INT_5
+import com.myapps.coinksimpleregistersimulator.domain.constans.INT_6
+import com.myapps.coinksimpleregistersimulator.domain.constans.INT_7
+import com.myapps.coinksimpleregistersimulator.domain.constans.INT_8
+import com.myapps.coinksimpleregistersimulator.domain.constans.INT_9
+import com.myapps.coinksimpleregistersimulator.domain.constans.STRING_EMPTY
+import com.myapps.coinksimpleregistersimulator.domain.constans.INT_11
 import com.myapps.coinksimpleregistersimulator.domain.utils.deleteSpaces
 import com.myapps.coinksimpleregistersimulator.domain.utils.navigate
 import com.myapps.coinksimpleregistersimulator.ui.viewmodels.PhoneViewModel
@@ -35,24 +45,24 @@ class PhoneNumberFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupListeners()
         binding.btnCheck.isEnabled = false
-        binding.tvPhoneNumber.text = phoneNumber.joinToString (separator = "") { it }
+        binding.tvPhoneNumber.text = phoneNumber.joinToString (STRING_EMPTY) { it }
     }
 
     private fun setupListeners() {
         binding.apply {
-            btn0.setOnClickListener {addDigit(0)}
-            btn1.setOnClickListener {addDigit(1)}
-            btn2.setOnClickListener {addDigit(2)}
-            btn3.setOnClickListener {addDigit(3)}
-            btn4.setOnClickListener { addDigit(4)}
-            btn5.setOnClickListener { addDigit(5)}
-            btn6.setOnClickListener { addDigit(6)}
-            btn7.setOnClickListener { addDigit(7)}
-            btn8.setOnClickListener { addDigit(8)}
-            btn9.setOnClickListener { addDigit(9)}
+            btn0.setOnClickListener {addDigit(INT_0)}
+            btn1.setOnClickListener {addDigit(INT_1)}
+            btn2.setOnClickListener {addDigit(INT_2)}
+            btn3.setOnClickListener {addDigit(INT_3)}
+            btn4.setOnClickListener { addDigit(INT_4)}
+            btn5.setOnClickListener { addDigit(INT_5)}
+            btn6.setOnClickListener { addDigit(INT_6)}
+            btn7.setOnClickListener { addDigit(INT_7)}
+            btn8.setOnClickListener { addDigit(INT_8)}
+            btn9.setOnClickListener { addDigit(INT_9)}
             btnBackspace.setOnClickListener { deleteDigit() }
             btnCheck.setOnClickListener {
-                val pNumber = phoneNumber.joinToString (separator = "") { it }.deleteSpaces()
+                val pNumber = phoneNumber.joinToString (STRING_EMPTY) { it }.deleteSpaces()
                 navigate(
                     PhoneNumberFragmentDirections.actionPhoneNumberFragmentToUserInfoFragment(pNumber),
                     null
@@ -62,10 +72,10 @@ class PhoneNumberFragment : Fragment() {
     }
 
     private fun addDigit(digit: Int) {
-        if (phoneNumber.size < 11) {
+        if (phoneNumber.size < INT_11) {
             phoneNumber.add(digit.toString())
-            binding.tvPhoneNumber.text = phoneNumber.joinToString (separator = "") { it }
-            if (phoneNumber.size == 3){
+            binding.tvPhoneNumber.text = phoneNumber.joinToString (STRING_EMPTY) { it }
+            if (phoneNumber.size == INT_3){
                 phoneNumber.add(" ")
             }
         }
@@ -73,7 +83,7 @@ class PhoneNumberFragment : Fragment() {
     }
 
     private fun enableButton() {
-        if(phoneNumber.size == 11){
+        if(phoneNumber.size == INT_11){
             binding.btnCheck.apply {
                 isEnabled = true
             }
@@ -85,7 +95,7 @@ class PhoneNumberFragment : Fragment() {
             phoneNumber.removeLast()
             binding.btnCheck.isEnabled = false
         }
-        binding.tvPhoneNumber.text = phoneNumber.joinToString (separator = ""){ it }
+        binding.tvPhoneNumber.text = phoneNumber.joinToString (STRING_EMPTY){ it }
     }
 
     override fun onResume() {
