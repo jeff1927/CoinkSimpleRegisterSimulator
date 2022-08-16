@@ -17,7 +17,6 @@ Visual Components of the app are in this layer: Activities and Fragments, furthe
 
 ### Used libraries: ###
 
-- [API](https://www.themoviedb.org/documentation/api)
 - [Coroutines](https://developer.android.com/topic/libraries/architecture/coroutines?hl=es-419)
 - [Retrofit2](https://github.com/square/retrofit)
 - [Gson](https://github.com/google/gson)
